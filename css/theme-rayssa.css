@@ -1,0 +1,89 @@
+/* Paleta Rayssa — roxo, rosa e azul (tema original + modo claro da auditoria) */
+
+:root {
+  --violet: #9b8cff;
+  --pink: #f472b6;
+  --blue: #6366f1;
+  --blue-deep: #4f46e5;
+  --sakura-light: #ffd6e8;
+  --sakura: #ffb7c5;
+  --gradient-brand: linear-gradient(135deg, var(--violet) 0%, var(--sakura) 50%, var(--pink) 100%);
+  --gradient-brand-hover: linear-gradient(135deg, #8b7cf8, #ffb7c5, #ec4899);
+  --font-display: "Archivo", "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Space Grotesk", "Inter", system-ui, sans-serif;
+}
+
+/* ── Modo escuro (padrão — visual original) ── */
+[data-theme="dark"] {
+  --background-base: #080810;
+  --background-sunken: #0f0f1a;
+  --background-raised: #141424;
+  --background-overlay: #1a1a2e;
+  --background-neutral-weak: rgba(155, 140, 255, 0.06);
+  --background-brand-weak: rgba(155, 140, 255, 0.12);
+
+  --text-neutral-strong: #ede9fe;
+  --text-neutral-weak: #7b78a0;
+  --text-neutral-weaker: #5c5978;
+  --text-brand-strong: var(--violet);
+  --text-inverse-strong: #ffffff;
+
+  --stroke-neutral-weak: #22223a;
+  --stroke-neutral-strong: rgba(155, 140, 255, 0.28);
+  --stroke-brand-strong: rgba(155, 140, 255, 0.45);
+  --stroke-focus: var(--violet);
+
+  --fill-brand: var(--violet);
+  --fill-brand-hover: #8b7cf8;
+  --fill-brand-press: #7c6ef0;
+  --fill-neutral-weak: rgba(155, 140, 255, 0.08);
+
+  --icon-brand-strong: var(--violet);
+  --icon-neutral-strong: #ede9fe;
+  --icon-neutral-weak: #7b78a0;
+
+  --shadow-raised: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-overlay: 0 12px 40px rgba(99, 102, 241, 0.15);
+  --shadow-focus: 0 0 0 3px rgba(155, 140, 255, 0.45);
+}
+
+/* ── Modo claro (auditoria: fundo #FAFAFA, accent azul) ── */
+[data-theme="light"] {
+  --background-base: #fafafa;
+  --background-sunken: #f4f4f8;
+  --background-raised: #ffffff;
+  --background-overlay: #ffffff;
+  --background-neutral-weak: rgba(99, 102, 241, 0.06);
+  --background-brand-weak: rgba(99, 102, 241, 0.08);
+
+  --text-neutral-strong: #09090b;
+  --text-neutral-weak: #52525b;
+  --text-neutral-weaker: #71717a;
+  --text-brand-strong: var(--blue-deep);
+  --text-inverse-strong: #ffffff;
+
+  --stroke-neutral-weak: #e4e4e7;
+  --stroke-neutral-strong: #d4d4d8;
+  --stroke-brand-strong: rgba(99, 102, 241, 0.35);
+  --stroke-focus: var(--blue);
+
+  --fill-brand: var(--blue);
+  --fill-brand-hover: var(--blue-deep);
+  --fill-brand-press: #4338ca;
+  --fill-neutral-weak: #f4f4f5;
+
+  --icon-brand-strong: var(--blue-deep);
+  --icon-neutral-strong: #09090b;
+  --icon-neutral-weak: #52525b;
+
+  --shadow-raised: 0 1px 3px rgba(9, 9, 11, 0.08), 0 4px 16px rgba(99, 102, 241, 0.08);
+  --shadow-overlay: 0 16px 40px rgba(9, 9, 11, 0.1);
+  --shadow-focus: 0 0 0 3px rgba(99, 102, 241, 0.35);
+}
+
+[data-theme="light"] .glow-1 {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+}
+[data-theme="light"] .glow-2 {
+  background: radial-gradient(circle, rgba(244, 114, 182, 0.08) 0%, transparent 70%);
+}

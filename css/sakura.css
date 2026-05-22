@@ -1,0 +1,426 @@
+/* ═══════════════════════════════════════════════════════════
+   Estética Sakura — identidade japonesa (pétalas, tons, detalhes)
+   Integrado à paleta roxo · rosa · azul
+   ═══════════════════════════════════════════════════════════ */
+@import url("sakura-base-asset.css");
+
+:root {
+  --sakura-light: #ffd6e8;
+  --sakura: #ffb7c5;
+  --sakura-deep: #f472b6;
+  --sakura-glow: rgba(255, 183, 197, 0.35);
+  --sakura-mist: rgba(255, 214, 232, 0.08);
+  --gradient-sakura: linear-gradient(135deg, var(--violet) 0%, var(--sakura) 45%, var(--pink) 100%);
+  --gradient-sakura-soft: linear-gradient(160deg, rgba(155, 140, 255, 0.15), rgba(255, 183, 197, 0.12), rgba(99, 102, 241, 0.08));
+}
+
+[data-theme="light"] {
+  --sakura-mist: rgba(255, 183, 197, 0.2);
+  --sakura-glow: rgba(244, 114, 182, 0.2);
+}
+
+/* Pétala SVG (5 pétalas estilizadas) */
+.petal {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  opacity: 0;
+  background: no-repeat center / contain;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='%23ffb7c5' opacity='0.85'%3E%3Cellipse cx='12' cy='5' rx='3.2' ry='5' transform='rotate(0 12 12)'/%3E%3Cellipse cx='12' cy='5' rx='3.2' ry='5' transform='rotate(72 12 12)'/%3E%3Cellipse cx='12' cy='5' rx='3.2' ry='5' transform='rotate(144 12 12)'/%3E%3Cellipse cx='12' cy='5' rx='3.2' ry='5' transform='rotate(216 12 12)'/%3E%3Cellipse cx='12' cy='5' rx='3.2' ry='5' transform='rotate(288 12 12)'/%3E%3Ccircle cx='12' cy='12' r='2' fill='%23f472b6'/%3E%3C/g%3E%3C/svg%3E");
+  animation: petal-fall linear infinite;
+  will-change: transform, opacity;
+}
+
+[data-theme="light"] .petal {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='%23f9a8d4' opacity='0.9'%3E%3Cellipse cx='12' cy='5' rx='3.2' ry='5' transform='rotate(0 12 12)'/%3E%3Cellipse cx='12' cy='5' rx='3.2' ry='5' transform='rotate(72 12 12)'/%3E%3Cellipse cx='12' cy='5' rx='3.2' ry='5' transform='rotate(144 12 12)'/%3E%3Cellipse cx='12' cy='5' rx='3.2' ry='5' transform='rotate(216 12 12)'/%3E%3Cellipse cx='12' cy='5' rx='3.2' ry='5' transform='rotate(288 12 12)'/%3E%3Ccircle cx='12' cy='12' r='2' fill='%23ec4899'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@keyframes petal-fall {
+  0% {
+    opacity: 0;
+    transform: translateY(-8vh) translateX(0) rotate(0deg) scale(0.6);
+  }
+  8% { opacity: 0.7; }
+  90% { opacity: 0.5; }
+  100% {
+    opacity: 0;
+    transform: translateY(105vh) translateX(var(--drift)) rotate(var(--spin)) scale(0.85);
+  }
+}
+
+.sakura-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.petal:nth-child(1)  { left: 4%;  --drift: 28px;  --spin: 220deg; animation-duration: 14s; animation-delay: 0s;   width: 11px; height: 11px; }
+.petal:nth-child(2)  { left: 14%; --drift: -35px; --spin: 380deg; animation-duration: 18s; animation-delay: 2s;   width: 15px; height: 15px; }
+.petal:nth-child(3)  { left: 26%; --drift: 42px;  --spin: 290deg; animation-duration: 16s; animation-delay: 5s;   width: 12px; height: 12px; }
+.petal:nth-child(4)  { left: 38%; --drift: -22px; --spin: 410deg; animation-duration: 20s; animation-delay: 1s;   width: 10px; height: 10px; }
+.petal:nth-child(5)  { left: 52%; --drift: 18px;  --spin: 250deg; animation-duration: 15s; animation-delay: 7s;   width: 14px; height: 14px; }
+.petal:nth-child(6)  { left: 64%; --drift: -48px; --spin: 330deg; animation-duration: 19s; animation-delay: 3s;   width: 11px; height: 11px; }
+.petal:nth-child(7)  { left: 76%; --drift: 32px;  --spin: 200deg; animation-duration: 17s; animation-delay: 9s;   width: 13px; height: 13px; }
+.petal:nth-child(8)  { left: 88%; --drift: -25px; --spin: 360deg; animation-duration: 21s; animation-delay: 4s;   width: 12px; height: 12px; }
+.petal:nth-child(9)  { left: 8%;  --drift: 55px;  --spin: 270deg; animation-duration: 22s; animation-delay: 11s;  width: 9px;  height: 9px;  }
+.petal:nth-child(10) { left: 45%; --drift: -38px; --spin: 440deg; animation-duration: 13s; animation-delay: 6s;   width: 16px; height: 16px; }
+.petal:nth-child(11) { left: 92%; --drift: 20px;  --spin: 310deg; animation-duration: 16s; animation-delay: 8s;   width: 10px; height: 10px; }
+.petal:nth-child(12) { left: 22%; --drift: -52px; --spin: 190deg; animation-duration: 23s; animation-delay: 12s;  width: 14px; height: 14px; }
+
+/* Retrato hero — chibi sobre base de sakuras */
+.hero-portrait {
+  position: absolute;
+  right: clamp(0%, 2vw, 6%);
+  top: 50%;
+  transform: translateY(-48%);
+  width: min(38vw, 400px);
+  margin: 0;
+  padding: 0 0 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+  z-index: 2;
+  animation: chibi-float 5s ease-in-out infinite;
+}
+
+.hero-portrait__glow {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 35%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, var(--sakura-glow) 0%, rgba(155, 140, 255, 0.12) 45%, transparent 72%);
+  filter: blur(12px);
+  z-index: 0;
+}
+
+.hero-portrait__base {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 112%;
+  max-width: 440px;
+  aspect-ratio: 520 / 140;
+  z-index: 1;
+  opacity: 0.92;
+  background: var(--img-sakura-base) center bottom / contain no-repeat;
+  filter: drop-shadow(0 8px 24px rgba(255, 183, 197, 0.25));
+}
+
+.hero-chibi {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  max-height: min(72vh, 480px);
+  object-fit: contain;
+  object-position: center bottom;
+  margin-bottom: -2%;
+  mix-blend-mode: lighten;
+  filter: drop-shadow(0 0 48px var(--sakura-glow)) drop-shadow(0 16px 32px rgba(155, 140, 255, 0.2));
+}
+
+[data-theme="light"] .hero-chibi {
+  mix-blend-mode: lighten;
+  filter: drop-shadow(0 12px 40px rgba(255, 183, 197, 0.4));
+}
+
+@keyframes chibi-float {
+  0%, 100% { transform: translateY(-48%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(4px); }
+}
+
+/* Círculo enso suave atrás do hero */
+.hero-enso {
+  position: absolute;
+  right: 8%;
+  top: 22%;
+  width: min(55vw, 520px);
+  height: min(55vw, 520px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 183, 197, 0.12);
+  box-shadow: inset 0 0 80px var(--sakura-mist);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-enso::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  border: 1px dashed rgba(155, 140, 255, 0.1);
+}
+
+/* Glows com névoa sakura */
+.glow-1 {
+  background: radial-gradient(circle, rgba(255, 183, 197, 0.14) 0%, rgba(155, 140, 255, 0.08) 40%, transparent 70%) !important;
+}
+.glow-2 {
+  background: radial-gradient(circle, rgba(244, 114, 182, 0.1) 0%, rgba(99, 102, 241, 0.06) 50%, transparent 70%) !important;
+}
+
+/* Logo — flor no mark */
+.logo-mark {
+  position: relative;
+  background: var(--gradient-sakura) !important;
+  overflow: visible;
+}
+.logo-mark::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg fill='%23ffd6e8'%3E%3Cellipse cx='8' cy='4' rx='2' ry='3.2'/%3E%3Cellipse cx='8' cy='4' rx='2' ry='3.2' transform='rotate(72 8 8)'/%3E%3Cellipse cx='8' cy='4' rx='2' ry='3.2' transform='rotate(144 8 8)'/%3E%3Cellipse cx='8' cy='4' rx='2' ry='3.2' transform='rotate(216 8 8)'/%3E%3Cellipse cx='8' cy='4' rx='2' ry='3.2' transform='rotate(288 8 8)'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* Labels de seção — pétala + estilo japonês */
+.s-label {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  color: var(--sakura) !important;
+  letter-spacing: 0.2em !important;
+}
+[data-theme="light"] .s-label { color: var(--sakura-deep) !important; }
+
+.s-label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg fill='%23ffb7c5'%3E%3Cellipse cx='10' cy='5' rx='2.5' ry='4'/%3E%3Cellipse cx='10' cy='5' rx='2.5' ry='4' transform='rotate(72 10 10)'/%3E%3Cellipse cx='10' cy='5' rx='2.5' ry='4' transform='rotate(144 10 10)'/%3E%3Cellipse cx='10' cy='5' rx='2.5' ry='4' transform='rotate(216 10 10)'/%3E%3Cellipse cx='10' cy='5' rx='2.5' ry='4' transform='rotate(288 10 10)'/%3E%3Ccircle cx='10' cy='10' r='1.5' fill='%23f472b6'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;
+  opacity: 0.9;
+}
+
+/* Divisor sakura entre seções principais */
+.section-sakura-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: var(--space-6) var(--gutter) 0;
+  max-width: calc(var(--container-max) + var(--gutter) * 2);
+  margin: 0 auto;
+  opacity: 0.5;
+}
+.section-sakura-divider span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sakura);
+  box-shadow: 0 0 8px var(--sakura-glow);
+}
+.section-sakura-divider::before,
+.section-sakura-divider::after {
+  content: "";
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 183, 197, 0.35), transparent);
+}
+
+/* Card sobre — canto com ramo */
+.sobre-card {
+  position: relative;
+}
+.sobre-card::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: -8px;
+  width: 100px;
+  height: 100px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Cpath d='M8 88 Q35 70 55 45' stroke='%23ffb7c5' stroke-width='1.2' opacity='0.35'/%3E%3Cg opacity='0.5' fill='%23ffb7c5'%3E%3Cellipse cx='52' cy='42' rx='4' ry='6' transform='rotate(-30 52 42)'/%3E%3Cellipse cx='58' cy='48' rx='3.5' ry='5.5' transform='rotate(20 58 48)'/%3E%3Cellipse cx='48' cy='50' rx='3' ry='5' transform='rotate(60 48 50)'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
+  pointer-events: none;
+}
+
+/* Badge disponível — pulso sakura */
+.status-badge {
+  border-color: rgba(255, 183, 197, 0.35) !important;
+  background: rgba(255, 183, 197, 0.08) !important;
+}
+.status-badge .badge-dot {
+  background: var(--sakura) !important;
+  box-shadow: 0 0 8px var(--sakura-glow);
+}
+
+/* Gradiente marca com sakura */
+.logo,
+.italic-grad,
+.stat-n,
+footer strong {
+  background: var(--gradient-sakura) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+#scroll-progress,
+.skip-link,
+.btn-gradient,
+.bar {
+  background: var(--gradient-sakura) !important;
+}
+
+/* Cards — borda superior sakura sutil */
+.card:hover,
+.proj-card:hover,
+.skill-card:hover {
+  box-shadow: 0 16px 48px rgba(255, 183, 197, 0.12), 0 8px 24px rgba(155, 140, 255, 0.1) !important;
+}
+
+.proj-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-sakura);
+  opacity: 0;
+  transition: opacity 350ms ease-out;
+  z-index: 2;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.proj-card {
+  position: relative;
+}
+.proj-card:hover::before { opacity: 1; }
+
+/* Foto / chibi — sobre base de sakuras */
+.profile-photo-wrap {
+  width: 160px;
+  height: 148px;
+  margin-bottom: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile-sakura-base {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 145%;
+  max-width: 200px;
+  aspect-ratio: 520 / 140;
+  z-index: 0;
+  opacity: 0.9;
+  pointer-events: none;
+  background: var(--img-sakura-base) center bottom / contain no-repeat;
+}
+
+.profile-photo {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  box-shadow: 0 0 0 3px var(--background-raised),
+    0 0 0 5px rgba(255, 183, 197, 0.35),
+    0 12px 40px rgba(255, 183, 197, 0.2) !important;
+}
+
+.profile-chibi {
+  object-fit: cover;
+  object-position: center 12%;
+  mix-blend-mode: lighten;
+  background: var(--background-raised);
+}
+
+[data-theme="light"] .profile-chibi {
+  mix-blend-mode: lighten;
+}
+
+/* Hero tagline sakura (opcional visual) */
+.hero-sakura-tag {
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--sakura);
+  opacity: 0.75;
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+/* Footer — pétalas discretas */
+footer {
+  position: relative;
+}
+footer::before {
+  content: "桜";
+  position: absolute;
+  left: var(--gutter);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: var(--sakura);
+  opacity: 0.25;
+  font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  footer::before { display: none; }
+}
+
+/* Fundo: névoa sakura no body */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 90% 10%, var(--sakura-mist), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 5% 80%, rgba(155, 140, 255, 0.06), transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+section,
+nav,
+footer,
+.section-sakura-divider {
+  position: relative;
+  z-index: 2;
+}
+
+#hero .hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 900px) {
+  .hero-portrait {
+    width: min(55vw, 300px);
+    right: -4%;
+    top: 54%;
+    opacity: 0.9;
+  }
+  .hero-chibi {
+    max-height: 45vh;
+  }
+  .hero-portrait__base {
+    width: 108%;
+  }
+  .hero-enso {
+    width: 80vw;
+    height: 80vw;
+    right: -15%;
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal { animation: none !important; display: none; }
+  .status-badge .badge-dot { animation: none; }
+  .hero-portrait { animation: none; transform: translateY(-48%); }
+}

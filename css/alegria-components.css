@@ -1,0 +1,107 @@
+/**
+ * Alegria UI Kit — componentes usados no portfólio
+ * Extraído do kit oficial (ui-kit.css)
+ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+  white-space: nowrap;
+}
+.btn:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
+.btn-md { height: 48px; padding: 0 var(--space-4); font-size: var(--text-small); line-height: 1; }
+.btn-sm { height: 36px; padding: 0 var(--space-3); font-size: var(--text-tiny); line-height: 1; }
+
+.btn-primary,
+.btn-gradient {
+  background: var(--gradient-brand);
+  color: var(--text-inverse-strong);
+  border-color: transparent;
+}
+.btn-primary:hover,
+.btn-gradient:hover {
+  background: var(--gradient-brand-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(155, 140, 255, 0.28);
+}
+.btn-primary:active,
+.btn-gradient:active { transform: translateY(0); }
+
+.btn-primary:not(.btn-gradient) { background: var(--fill-brand); }
+.btn-primary:not(.btn-gradient):hover { background: var(--fill-brand-hover); }
+
+.btn-secondary {
+  background: var(--background-raised);
+  color: var(--text-neutral-strong);
+  border-color: var(--stroke-neutral-weak);
+}
+.btn-secondary:hover { background: var(--fill-neutral-weak); transform: translateY(-1px); }
+.btn-secondary:active { border-color: var(--stroke-neutral-strong); transform: translateY(0); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 24px;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  font: var(--weight-bold) var(--text-tiny)/1 var(--font-sans);
+  border: 1px solid transparent;
+}
+.badge-brand {
+  background: var(--background-brand-weak);
+  color: var(--text-brand-strong);
+  border: 1px solid rgba(155, 140, 255, 0.25);
+}
+[data-theme="light"] .badge-brand {
+  border-color: rgba(99, 102, 241, 0.2);
+}
+.badge-neutral { background: var(--fill-neutral-weak); color: var(--text-neutral-strong); }
+
+.card {
+  background: var(--background-raised);
+  border: 1px solid var(--stroke-neutral-weak);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-raised);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--background-brand-weak);
+  color: var(--text-brand-strong);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--weight-bold) var(--text-small)/1 var(--font-sans);
+  border: 1px solid var(--stroke-neutral-weak);
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--icon-neutral-weak);
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+}
+.icon-btn:hover {
+  background: var(--fill-neutral-weak);
+  color: var(--icon-neutral-strong);
+}

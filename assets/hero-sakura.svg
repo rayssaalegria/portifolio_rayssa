@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="branch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9b8cff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffb7c5" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="bloom" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd6e8"/>
+      <stop offset="70%" stop-color="#ffb7c5" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0.6"/>
+    </radialGradient>
+  </defs>
+  <!-- galho -->
+  <path d="M40 320 C120 280 180 200 220 120 C250 60 280 40 320 30" stroke="url(#branch)" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M220 120 C200 100 170 95 150 110" stroke="url(#branch)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M250 80 C270 70 300 75 310 95" stroke="url(#branch)" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.45"/>
+  <!-- flores -->
+  <g opacity="0.85">
+    <g transform="translate(305 35)">
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(72)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(144)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(216)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(288)"/>
+      <circle r="3" fill="#f472b6" opacity="0.8"/>
+    </g>
+    <g transform="translate(255 75) scale(0.75)">
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(15)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(87)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(159)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(231)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(303)"/>
+      <circle r="2.5" fill="#9b8cff" opacity="0.5"/>
+    </g>
+    <g transform="translate(200 115) scale(0.9)">
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(-20)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(52)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(124)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(196)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(268)"/>
+      <circle r="2.8" fill="#f472b6" opacity="0.7"/>
+    </g>
+    <g transform="translate(145 108) scale(0.55)" opacity="0.7">
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(10)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(82)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(154)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(226)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="url(#bloom)" transform="rotate(298)"/>
+    </g>
+    <g transform="translate(318 95) scale(0.5)" opacity="0.6">
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="#ffd6e8" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="#ffb7c5" transform="rotate(72)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="#ffd6e8" transform="rotate(144)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="#ffb7c5" transform="rotate(216)"/>
+      <ellipse cx="0" cy="-8" rx="7" ry="11" fill="#ffd6e8" transform="rotate(288)"/>
+    </g>
+  </g>
+  <!-- pétalas soltas -->
+  <ellipse cx="180" cy="200" rx="4" ry="6" fill="#ffb7c5" opacity="0.35" transform="rotate(40 180 200)"/>
+  <ellipse cx="340" cy="160" rx="3" ry="5" fill="#ffd6e8" opacity="0.3" transform="rotate(-15 340 160)"/>
+  <ellipse cx="120" cy="250" rx="3.5" ry="5.5" fill="#f472b6" opacity="0.25" transform="rotate(70 120 250)"/>
+</svg>

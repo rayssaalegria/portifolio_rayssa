@@ -1,0 +1,4 @@
+node_modules/
+deploy/
+.claude/
+.DS_Store

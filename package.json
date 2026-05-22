@@ -1,0 +1,20 @@
+{
+  "name": "portifolio-rayssa",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:icons": "node scripts/build-icons.mjs",
+    "deploy:prepare": "node scripts/prepare-deploy.mjs",
+    "postinstall": "npm run build:icons"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.0.0",
+    "@mui/material": "^7.0.0"
+  },
+  "devDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

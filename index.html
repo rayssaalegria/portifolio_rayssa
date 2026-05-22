@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rayssa Alegria — UI/UX Designer e Desenvolvedora Front-End baseada em Manaus, AM. Criando interfaces simples, bonitas e acessíveis há 4+ anos." />
+  <meta property="og:title" content="Rayssa Alegria — UI/UX Designer & Front-End Developer" />
+  <meta property="og:description" content="Transformo ideias complexas em interfaces simples, bonitas e acessíveis. Design com propósito. Código com cuidado." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rayssaalegria.com.br/" />
+  <link rel="canonical" href="https://rayssaalegria.com.br/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Rayssa Alegria — UI/UX Designer & Front-End Developer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjOWI4Y2ZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjQ3MmI2Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAsNTApIj48Y2lyY2xlIHI9IjE2IiBmaWxsPSIjMWEwYTJlIi8+PGNpcmNsZSBjeD0iMCIgY3k9Ii0yNCIgcng9IjEzIiByeT0iMjQiIGZpbGw9IiM5YjhjZmYiIG9wYWNpdHk9Ii45NSIvPjxjaXJjbGUgY3g9IjAiIGN5PSItMjQiIHJ4PSIxMyIgcnk9IjI0IiBmaWxsPSIjNjM2NmYxIiBvcGFjaXR5PSIuOSIgdHJhbnNmb3JtPSJyb3RhdGUoNzIpIi8+PGNpcmNsZSBjeD0iMCIgY3k9Ii0yNCIgcng9IjEzIiByeT0iMjQiIGZpbGw9IiNmNDcyYjYiIG9wYWNpdHk9Ii45IiB0cmFuc2Zvcm09InJvdGF0ZSgxNDQpIi8+PC9nPgo8L3N2Zz4=">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500&family=Playfair+Display:ital,wght@1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/alegria-tokens.css">
+  <link rel="stylesheet" href="css/theme-rayssa.css">
+  <link rel="stylesheet" href="css/alegria-components.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/sakura.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem('rayssa-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+<div class="sakura-layer" aria-hidden="true">
+  <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+  <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+  <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+  <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+</div>
+
+<a class="skip-link" href="#main">Ir para o conteúdo principal</a>
+<div id="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso de leitura"></div>
+
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu de navegação" aria-modal="true">
+  <a href="#sobre"      onclick="closeMobileMenu()" data-i18n="nav.about">Sobre</a>
+  <a href="#skills"     onclick="closeMobileMenu()" data-i18n="nav.skills">Skills</a>
+  <a href="#projetos"   onclick="closeMobileMenu()" data-i18n="nav.projects">Projetos</a>
+  <a href="#experiencia" onclick="closeMobileMenu()" data-i18n="nav.experience">Experiência</a>
+  <a href="#contato"    onclick="closeMobileMenu()" data-i18n="nav.contact">Contato</a>
+</div>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="logo" href="#main" aria-label="Rayssa Alegria — início">
+    <span class="logo-mark" aria-hidden="true">RA</span>
+    <span>Rayssa Alegria</span>
+  </a>
+  <div class="nav-right">
+    <ul>
+      <li><a href="#sobre"       data-i18n="nav.about">Sobre</a></li>
+      <li><a href="#skills"      data-i18n="nav.skills">Skills</a></li>
+      <li><a href="#projetos"    data-i18n="nav.projects">Projetos</a></li>
+      <li><a href="#experiencia" data-i18n="nav.experience">Experiência</a></li>
+      <li><a href="#contato"     data-i18n="nav.contact">Contato</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button class="lang-btn active" id="btn-pt" onclick="setLang('pt')" aria-pressed="true" lang="pt">PT</button>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar tema claro/escuro">
+        <span class="theme-icon" data-mui-icon="DarkMode" aria-hidden="true"></span>
+        <span id="theme-label">Escuro</span>
+      </button>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-enso" aria-hidden="true"></div>
+  <figure class="hero-portrait">
+    <div class="hero-portrait__glow" aria-hidden="true"></div>
+    <div class="hero-portrait__base" role="presentation" aria-hidden="true"></div>
+    <img class="hero-chibi" src="./assets/chibi-rayssa.png" alt="Ilustração chibi de Rayssa Alegria com sakuras no cabelo, piscando e fazendo coração com os dedos" width="420" height="420" decoding="async">
+  </figure>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="hero-content" id="main">
+    <span class="hero-sakura-tag" data-i18n="hero.sakura">桜 · design com alma</span>
+    <div class="badge badge-brand status-badge"><span class="badge-dot" aria-hidden="true"></span> <span data-i18n="hero.badge">Disponível para projetos</span></div>
+    <h1>UI/UX Designer<br>&amp; <span class="italic-grad">Front-End Dev</span></h1>
+    <p class="hero-sub" data-i18n="hero.sub">
+      Transformo ideias complexas em interfaces simples, bonitas e acessíveis.
+      Design com propósito. Código com cuidado.
+    </p>
+    <div class="cta-row">
+      <a href="#projetos" class="btn btn-primary btn-gradient btn-md" data-i18n="hero.cta1">Ver projetos →</a>
+      <a href="#contato"  class="btn btn-secondary btn-md" data-i18n="hero.cta2">Entre em contato</a>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <span data-mui-icon="KeyboardArrowDown"></span>
+  </div>
+</section>
+
+<!-- ── SOBRE ── -->
+<section id="sobre">
+  <div class="sobre-grid">
+    <div class="fi">
+      <p class="s-label" data-i18n="about.label">Sobre mim</p>
+      <h2 data-i18n="about.h2">Design que conecta<br>pessoas a soluções</h2>
+      <p class="about-text" data-i18n="about.p1">
+        Sou <strong>Rayssa Alegria</strong>, UI/UX Designer e Desenvolvedora Front-End
+        baseada em Manaus, AM. Graduada em Sistemas de Informação e pós-graduada em
+        Desenvolvimento Front-End, combino sensibilidade visual com habilidade técnica
+        para criar experiências digitais que realmente funcionam.
+      </p>
+      <p class="about-text" data-i18n="about.p2">
+        Acredito que bom design vai além da estética — é acessibilidade, clareza
+        e impacto real na vida das pessoas.
+      </p>
+      <div class="stats-row">
+        <div class="stat-box card"><div class="stat-n">4+</div><div class="stat-l" data-i18n="about.stat1">Anos de experiência</div></div>
+        <div class="stat-box card"><div class="stat-n">20+</div><div class="stat-l" data-i18n="about.stat2">Projetos entregues</div></div>
+        <div class="stat-box card"><div class="stat-n">100%</div><div class="stat-l" data-i18n="about.stat3">Domínio em Figma</div></div>
+        <div class="stat-box card"><div class="stat-n">2</div><div class="stat-l" data-i18n="about.stat4">Titulações acadêmicas</div></div>
+      </div>
+    </div>
+    <div class="fi">
+      <div class="sobre-card card">
+        <div class="profile-photo-wrap">
+          <div class="profile-sakura-base" role="presentation" aria-hidden="true"></div>
+          <img src="./assets/chibi-rayssa.png" alt="Rayssa Alegria — ilustração chibi com sakuras" class="profile-photo profile-chibi" width="120" height="120" decoding="async">
+        </div>
+        <h3>Rayssa Alegria</h3>
+        <div class="role">UI/UX Designer &amp; Front-End Developer</div>
+        <p data-i18n="about.card">
+          Especialista em criar interfaces que equilibram beleza e funcionalidade,
+          com forte atuação em Figma, React.js e desenvolvimento no-code com Bubble.
+        </p>
+        <div class="loc">
+          <span data-mui-icon="LocationOn" aria-hidden="true"></span>
+          <span data-i18n="about.loc">Manaus, Amazonas, Brasil</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-sakura-divider fi" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <p class="s-label fi" data-i18n="skills.label">Habilidades</p>
+  <h2 class="fi" data-i18n="skills.h2">O que eu sei fazer</h2>
+  <p class="s-desc fi" data-i18n="skills.desc">Design e desenvolvimento como partes de um mesmo processo criativo.</p>
+
+  <div class="skills-grid">
+    <div class="skill-card card fi">
+      <div class="sk-icon" data-mui-icon="DesignServices" aria-hidden="true"></div>
+      <h3>UI/UX Design</h3>
+      <p data-i18n="skills.s1">Pesquisa, wireframes, prototipagem e design de interfaces acessíveis e centradas no usuário.</p>
+      <div class="bar-wrap"><div class="bar" style="width:95%"></div></div>
+    </div>
+
+    <div class="skill-card card fi">
+      <div class="sk-icon sk-icon--figma" data-mui-icon="Layers" aria-hidden="true"></div>
+      <h3>Figma</h3>
+      <p data-i18n="skills.s2">Design de alta fidelidade, sistemas de design, componentes e prototipagem interativa.</p>
+      <div class="bar-wrap"><div class="bar" style="width:100%"></div></div>
+    </div>
+
+    <div class="skill-card card fi">
+      <div class="sk-icon" data-mui-icon="Code" aria-hidden="true"></div>
+      <h3>Front-End Development</h3>
+      <p data-i18n="skills.s3">HTML, CSS, JavaScript e React.js para transformar designs em código funcional e elegante.</p>
+      <div class="bar-wrap"><div class="bar" style="width:88%"></div></div>
+    </div>
+
+    <div class="skill-card card fi">
+      <div class="sk-icon" data-mui-icon="DashboardCustomize" aria-hidden="true"></div>
+      <h3>No-code / Low-code</h3>
+      <p data-i18n="skills.s4">Desenvolvimento ágil com Bubble para produtos de alta qualidade sem código complexo.</p>
+      <div class="bar-wrap"><div class="bar" style="width:82%"></div></div>
+    </div>
+
+    <div class="skill-card card fi">
+      <div class="sk-icon" data-mui-icon="Brush" aria-hidden="true"></div>
+      <h3 data-i18n="skills.s5h">Branding &amp; Ilustração</h3>
+      <p data-i18n="skills.s5">Identidade visual, iconografia e criação gráfica com Adobe Illustrator e XD.</p>
+      <div class="bar-wrap"><div class="bar" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill-card card fi">
+      <div class="sk-icon" data-mui-icon="Accessibility" aria-hidden="true"></div>
+      <h3 data-i18n="skills.s6h">Acessibilidade</h3>
+      <p data-i18n="skills.s6">Design inclusivo com foco em WCAG, contraste, tipografia legível e experiência universal.</p>
+      <div class="bar-wrap"><div class="bar" style="width:93%"></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-sakura-divider fi" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<!-- ── PROJETOS ── -->
+<section id="projetos">
+  <p class="s-label fi" data-i18n="projects.label">Projetos</p>
+  <h2 class="fi" data-i18n="projects.h2">Trabalhos em destaque</h2>
+  <p class="s-desc fi" data-i18n="projects.desc">+20 projetos reais de UI/UX para setores públicos e privados.</p>
+
+  <div class="projects-grid">
+
+    <article class="proj-card card fi proj-card--live">
+      <div class="proj-thumb proj-thumb--purple">
+        <div class="proj-mock proj-mock--systra" aria-hidden="true">
+          <div class="proj-mock__bar"></div>
+          <div class="proj-mock__body">
+            <div class="proj-mock__line w90"></div>
+            <div class="proj-mock__line w70"></div>
+            <div class="proj-mock__swatches"><span></span><span></span><span></span><span></span></div>
+            <div class="proj-mock__line w50"></div>
+          </div>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="badge badge-brand ptag" data-i18n="tag.tool">Ferramenta</span>
+          <span class="badge badge-neutral ptag">UI/UX</span>
+          <span class="badge badge-neutral ptag">Front-End</span>
+        </div>
+        <h3>Systra</h3>
+        <p data-i18n="systra.desc">Extrator de design system a partir de qualquer URL — cores, tipografia, espaçamentos e mais.</p>
+        <ul class="proj-features">
+          <li data-i18n="systra.f1">Análise automática de tokens visuais (cores, fontes, radius, sombras)</li>
+          <li data-i18n="systra.f2">Exportação organizada para uso em Figma e código</li>
+          <li data-i18n="systra.f3">Interface focada em fluxo rápido: colar URL e inspecionar</li>
+          <li data-i18n="systra.f4">Disponível em miraynaike.com/systra — produto real, não só conceito</li>
+        </ul>
+        <a href="https://miraynaike.com/systra" class="proj-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.viewLive">Abrir site →</a>
+      </div>
+    </article>
+
+    <article class="proj-card card fi">
+      <div class="proj-thumb proj-thumb--teal">
+<div class="proj-mock" aria-hidden="true">
+        <div class="proj-mock__bar"></div>
+        <div class="proj-mock__body">
+          <div class="proj-mock__line w90"></div>
+          <div class="proj-mock__line w70"></div>
+          <div class="proj-mock__line w50"></div>
+          <div class="proj-mock__tiles"><span></span><span></span></div>
+        </div>
+      </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="badge badge-brand ptag" data-i18n="tag.health">Saúde</span><span class="badge badge-neutral ptag">UI/UX</span><span class="badge badge-neutral ptag">Gov</span></div>
+        <h3>UPA Livre</h3>
+        <p data-i18n="p1.desc">Sistema de gestão para Unidade de Pronto Atendimento.</p>
+        <ul class="proj-features">
+          <li data-i18n="p1.f1">Triagem digital de pacientes com classificação por urgência</li>
+          <li data-i18n="p1.f2">Painel de controle de filas em tempo real</li>
+          <li data-i18n="p1.f3">Histórico de atendimentos e prontuário digital</li>
+          <li data-i18n="p1.f4">Dashboard operacional para gestores</li>
+        </ul>
+        <a href="https://www.behance.net/rayssaalegria" class="proj-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Ver projeto →</a>
+      </div>
+    </article>
+
+    <article class="proj-card card fi">
+      <div class="proj-thumb proj-thumb--blue">
+<div class="proj-mock" aria-hidden="true">
+        <div class="proj-mock__bar"></div>
+        <div class="proj-mock__body">
+          <div class="proj-mock__line w90"></div>
+          <div class="proj-mock__line w70"></div>
+          <div class="proj-mock__line w50"></div>
+          <div class="proj-mock__tiles"><span></span><span></span></div>
+        </div>
+      </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="badge badge-brand ptag" data-i18n="tag.security">Segurança</span><span class="badge badge-neutral ptag">UI/UX</span><span class="badge badge-neutral ptag">Gov</span></div>
+        <h3>Politec</h3>
+        <p data-i18n="p2.desc">Interface para a Polícia Técnica.</p>
+        <ul class="proj-features">
+          <li data-i18n="p2.f1">Sistema de mensagens internas entre equipes</li>
+          <li data-i18n="p2.f2">Mapa de rotas e acompanhamento de deslocamentos</li>
+          <li data-i18n="p2.f3">Visão geral operacional com indicadores</li>
+          <li data-i18n="p2.f4">Painel de integrações com sistemas externos</li>
+        </ul>
+        <a href="https://www.behance.net/rayssaalegria" class="proj-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Ver projeto →</a>
+      </div>
+    </article>
+
+    <article class="proj-card card fi">
+      <div class="proj-thumb proj-thumb--green">
+<div class="proj-mock" aria-hidden="true">
+        <div class="proj-mock__bar"></div>
+        <div class="proj-mock__body">
+          <div class="proj-mock__line w90"></div>
+          <div class="proj-mock__line w70"></div>
+          <div class="proj-mock__line w50"></div>
+          <div class="proj-mock__tiles"><span></span><span></span></div>
+        </div>
+      </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="badge badge-brand ptag" data-i18n="tag.social">Social</span><span class="badge badge-neutral ptag">UI/UX</span><span class="badge badge-neutral ptag">Gov</span></div>
+        <h3>Ração do Meu Pet</h3>
+        <p data-i18n="p4.desc">App da Subsecretaria de Proteção, Defesa e Bem-Estar Animal.</p>
+        <ul class="proj-features">
+          <li data-i18n="p4.f1">Cadastro e histórico de pets por tutor</li>
+          <li data-i18n="p4.f2">Solicitação de doação de ração pelo app</li>
+          <li data-i18n="p4.f3">Mapa de pontos de distribuição e retirada</li>
+          <li data-i18n="p4.f4">Painel de gestão de beneficiários para servidores</li>
+        </ul>
+        <a href="https://www.behance.net/rayssaalegria" class="proj-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Ver projeto →</a>
+      </div>
+    </article>
+
+    <article class="proj-card card fi">
+      <div class="proj-thumb proj-thumb--purple">
+<div class="proj-mock" aria-hidden="true">
+        <div class="proj-mock__bar"></div>
+        <div class="proj-mock__body">
+          <div class="proj-mock__line w90"></div>
+          <div class="proj-mock__line w70"></div>
+          <div class="proj-mock__line w50"></div>
+          <div class="proj-mock__tiles"><span></span><span></span></div>
+        </div>
+      </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="badge badge-brand ptag" data-i18n="tag.health">Saúde</span><span class="badge badge-neutral ptag">UI/UX</span><span class="badge badge-neutral ptag">Gov</span></div>
+        <h3>Perícia Médica</h3>
+        <p data-i18n="p5.desc">Plataforma de gestão de perícias médicas para o setor de saúde.</p>
+        <ul class="proj-features">
+          <li data-i18n="p5.f1">Agendamento online de perícias e exames</li>
+          <li data-i18n="p5.f2">Emissão de laudos e relatórios médicos digitais</li>
+          <li data-i18n="p5.f3">Histórico completo de perícias por servidor/paciente</li>
+          <li data-i18n="p5.f4">Painel de controle para médicos peritos</li>
+        </ul>
+        <a href="https://www.behance.net/rayssaalegria" class="proj-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Ver projeto →</a>
+      </div>
+    </article>
+
+    <article class="proj-card card fi">
+      <div class="proj-thumb proj-thumb--amber">
+<div class="proj-mock" aria-hidden="true">
+        <div class="proj-mock__bar"></div>
+        <div class="proj-mock__body">
+          <div class="proj-mock__line w90"></div>
+          <div class="proj-mock__line w70"></div>
+          <div class="proj-mock__line w50"></div>
+          <div class="proj-mock__tiles"><span></span><span></span></div>
+        </div>
+      </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="badge badge-brand ptag" data-i18n="tag.mgmt">Gestão</span><span class="badge badge-neutral ptag">UI/UX</span><span class="badge badge-neutral ptag">Gov</span></div>
+        <h3>Inventário Seguro</h3>
+        <p data-i18n="p6.desc">Sistema de controle patrimonial.</p>
+        <ul class="proj-features">
+          <li data-i18n="p6.f1">Cadastro e rastreio de bens patrimoniais</li>
+          <li data-i18n="p6.f2">Confirmação de inventário com QR Code / NFC</li>
+          <li data-i18n="p6.f3">Relatórios de depreciação e movimentação</li>
+          <li data-i18n="p6.f4">Alertas de itens sem localização confirmada</li>
+        </ul>
+        <a href="https://www.behance.net/rayssaalegria" class="proj-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Ver projeto →</a>
+      </div>
+    </article>
+
+    <article class="proj-card card fi">
+      <div class="proj-thumb proj-thumb--blue">
+<div class="proj-mock" aria-hidden="true">
+        <div class="proj-mock__bar"></div>
+        <div class="proj-mock__body">
+          <div class="proj-mock__line w90"></div>
+          <div class="proj-mock__line w70"></div>
+          <div class="proj-mock__line w50"></div>
+          <div class="proj-mock__tiles"><span></span><span></span></div>
+        </div>
+      </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="badge badge-brand ptag" data-i18n="tag.logistics">Logística</span><span class="badge badge-neutral ptag">UI/UX</span><span class="badge badge-neutral ptag">Dashboard</span></div>
+        <h3>Controle de Estoque</h3>
+        <p data-i18n="p7.desc">Interface de gestão de estoque e suprimentos.</p>
+        <ul class="proj-features">
+          <li data-i18n="p7.f1">Registro de entradas e saídas de produtos</li>
+          <li data-i18n="p7.f2">Alertas automáticos de estoque mínimo</li>
+          <li data-i18n="p7.f3">Relatórios de consumo por período e setor</li>
+          <li data-i18n="p7.f4">Dashboard com métricas de movimentação</li>
+        </ul>
+        <a href="https://www.behance.net/rayssaalegria" class="proj-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Ver projeto →</a>
+      </div>
+    </article>
+
+    <article class="proj-card card fi">
+      <div class="proj-thumb proj-thumb--amber">
+<div class="proj-mock" aria-hidden="true">
+        <div class="proj-mock__bar"></div>
+        <div class="proj-mock__body">
+          <div class="proj-mock__line w90"></div>
+          <div class="proj-mock__line w70"></div>
+          <div class="proj-mock__line w50"></div>
+          <div class="proj-mock__tiles"><span></span><span></span></div>
+        </div>
+      </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="badge badge-brand ptag" data-i18n="tag.emergency">Emergência</span><span class="badge badge-neutral ptag">UI/UX</span><span class="badge badge-neutral ptag">Gov</span></div>
+        <h3>Defesa Civil</h3>
+        <p data-i18n="p8.desc">Sistema de monitoramento e ação operacional para a Defesa Civil.</p>
+        <ul class="proj-features">
+          <li data-i18n="p8.f1">Registro e acompanhamento de ocorrências em tempo real</li>
+          <li data-i18n="p8.f2">Mobilização e despacho de equipes de campo</li>
+          <li data-i18n="p8.f3">Mapa de risco com zonas de atenção</li>
+          <li data-i18n="p8.f4">Comunicação interna entre agentes e central</li>
+        </ul>
+        <a href="https://www.behance.net/rayssaalegria" class="proj-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Ver projeto →</a>
+      </div>
+    </article>
+
+    <article class="proj-card card fi">
+      <div class="proj-thumb proj-thumb--teal">
+<div class="proj-mock" aria-hidden="true">
+        <div class="proj-mock__bar"></div>
+        <div class="proj-mock__body">
+          <div class="proj-mock__line w90"></div>
+          <div class="proj-mock__line w70"></div>
+          <div class="proj-mock__line w50"></div>
+          <div class="proj-mock__tiles"><span></span><span></span></div>
+        </div>
+      </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="badge badge-brand ptag" data-i18n="tag.citizen">Cidadão</span><span class="badge badge-neutral ptag">UI/UX</span><span class="badge badge-neutral ptag">Gov</span></div>
+        <h3>Procon Digital</h3>
+        <p data-i18n="p9.desc">Plataforma digital de defesa do consumidor.</p>
+        <ul class="proj-features">
+          <li data-i18n="p9.f1">Abertura e acompanhamento de reclamações online</li>
+          <li data-i18n="p9.f2">Cadastro e gestão de empresas registradas</li>
+          <li data-i18n="p9.f3">Painel de mediação entre consumidor e empresa</li>
+          <li data-i18n="p9.f4">Indicadores de resolução e tempo de resposta</li>
+        </ul>
+        <a href="https://www.behance.net/rayssaalegria" class="proj-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Ver projeto →</a>
+      </div>
+    </article>
+
+    <article class="proj-card card fi">
+      <div class="proj-thumb proj-thumb--rose">
+<div class="proj-mock" aria-hidden="true">
+        <div class="proj-mock__bar"></div>
+        <div class="proj-mock__body">
+          <div class="proj-mock__line w90"></div>
+          <div class="proj-mock__line w70"></div>
+          <div class="proj-mock__line w50"></div>
+          <div class="proj-mock__tiles"><span></span><span></span></div>
+        </div>
+      </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="badge badge-brand ptag" data-i18n="tag.health">Saúde</span><span class="badge badge-neutral ptag">UI/UX</span><span class="badge badge-neutral ptag">Hemocentro</span></div>
+        <h3>Gestão de Bolsas de Sangue</h3>
+        <p data-i18n="p10.desc">Sistema para controle do banco de sangue hospitalar.</p>
+        <ul class="proj-features">
+          <li data-i18n="p10.f1">Controle de estoque por tipo sanguíneo e validade</li>
+          <li data-i18n="p10.f2">Registro de doações e triagem de doadores</li>
+          <li data-i18n="p10.f3">Solicitações de transfusão por unidade hospitalar</li>
+          <li data-i18n="p10.f4">Alertas de estoque crítico e vencimento</li>
+        </ul>
+        <a href="https://www.behance.net/rayssaalegria" class="proj-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Ver projeto →</a>
+      </div>
+    </article>
+
+    <article class="proj-card card fi">
+      <div class="proj-thumb proj-thumb--purple">
+<div class="proj-mock" aria-hidden="true">
+        <div class="proj-mock__bar"></div>
+        <div class="proj-mock__body">
+          <div class="proj-mock__line w90"></div>
+          <div class="proj-mock__line w70"></div>
+          <div class="proj-mock__line w50"></div>
+          <div class="proj-mock__tiles"><span></span><span></span></div>
+        </div>
+      </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="badge badge-brand ptag" data-i18n="tag.telecom">Telecomunicação</span><span class="badge badge-neutral ptag">UI/UX</span><span class="badge badge-neutral ptag">Privado</span></div>
+        <h3>Radiocomunicação</h3>
+        <p data-i18n="p11.desc">Sistema de gestão de ordens de serviço e comunicação em campo.</p>
+        <ul class="proj-features">
+          <li data-i18n="p11.f1">Acompanhamento de ordens de serviço (O.S) em tempo real</li>
+          <li data-i18n="p11.f2">Mensagens entre equipes de campo e administração</li>
+          <li data-i18n="p11.f3">Controle de status e prioridade de atendimentos</li>
+          <li data-i18n="p11.f4">Histórico de intervenções técnicas por equipamento</li>
+        </ul>
+        <a href="https://www.behance.net/rayssaalegria" class="proj-link" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">Ver projeto →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ── EXPERIÊNCIA ── -->
+<section id="experiencia">
+  <div class="exp-wrap">
+    <div>
+      <p class="s-label fi" data-i18n="exp.label">Experiência</p>
+      <h2 class="fi" data-i18n="exp.h2">Trajetória profissional</h2>
+      <p class="s-desc fi" style="margin-bottom:48px" data-i18n="exp.desc">Construindo produtos digitais com intenção desde 2021.</p>
+
+      <div class="tl fi">
+        <div class="tl-item">
+          <div class="tl-date" data-i18n="exp.date1">2022 — Presente</div>
+          <div class="tl-title" data-i18n="exp.title1">UI/UX Designer</div>
+          <div class="tl-co" data-i18n="exp.co1">Prestador de Serviço &amp; SASI · Manaus, AM</div>
+          <div class="tl-desc" data-i18n="exp.d1">Design de produtos digitais completos para setores públicos e privados, com atuação em saúde, segurança pública, gestão governamental e cidadania. Pesquisa, prototipagem em Figma, design systems e entrega de specs para desenvolvimento.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2021</div>
+          <div class="tl-title" data-i18n="exp.title2">Web Designer</div>
+          <div class="tl-co" data-i18n="exp.co2">Voluntário</div>
+          <div class="tl-desc" data-i18n="exp.d2">Criação de peças visuais e interfaces web para projetos sociais e comunitários, desenvolvendo habilidades de comunicação visual.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p class="s-label fi" data-i18n="stack.label">Stack</p>
+      <h2 class="fi" data-i18n="stack.h2">Tecnologias</h2>
+      <p class="s-desc fi" style="margin-bottom:32px" data-i18n="stack.desc">Ferramentas que domino no dia a dia.</p>
+      <div class="stack-cloud fi">
+        <span class="stk">Figma</span>
+        <span class="stk">Adobe XD</span>
+        <span class="stk">Illustrator</span>
+        <span class="stk">HTML / CSS</span>
+        <span class="stk">JavaScript</span>
+        <span class="stk">React.js</span>
+        <span class="stk">Bubble</span>
+        <span class="stk">Design System</span>
+        <span class="stk" data-i18n="stk.proto">Prototipagem</span>
+        <span class="stk" data-i18n="stk.a11y">Acessibilidade</span>
+        <span class="stk">Branding</span>
+        <span class="stk">UX Research</span>
+        <span class="stk">Wireframing</span>
+        <span class="stk">Git / GitHub</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FORMAÇÃO ── -->
+<section id="formacao">
+  <p class="s-label fi" data-i18n="edu.label">Formação</p>
+  <h2 class="fi" data-i18n="edu.h2">Educação</h2>
+  <p class="s-desc fi" data-i18n="edu.desc">Base acadêmica sólida em design e tecnologia.</p>
+
+  <div class="edu-grid">
+    <div class="edu-card card fi">
+      <div class="edu-icon" data-mui-icon="School" aria-hidden="true"></div>
+      <div class="edu-deg" data-i18n="edu.deg1">Pós-graduação em Desenvolvimento Front-End</div>
+      <div class="edu-school">Anhanguera Educacional</div>
+      <div class="edu-year" data-i18n="edu.year1">Concluído em 2023</div>
+    </div>
+    <div class="edu-card card fi">
+      <div class="edu-icon" data-mui-icon="MenuBook" aria-hidden="true"></div>
+      <div class="edu-deg" data-i18n="edu.deg2">Bacharelado em Sistemas de Informação</div>
+      <div class="edu-school">Centro Universitário Fametro</div>
+      <div class="edu-year">2019 – 2022</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-sakura-divider fi" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<!-- ── CONTATO ── -->
+<section id="contato">
+  <div class="contact-wrap">
+    <p class="s-label fi" data-i18n="contact.label">Contato</p>
+    <h2 class="fi" data-i18n="contact.h2">Vamos criar algo juntos?</h2>
+
+    <div class="contact-box card fi">
+      <h3 data-i18n="contact.h3">Estou disponível para projetos</h3>
+      <p data-i18n="contact.p">Produto novo, redesign ou consultoria — adoraria ouvir sobre o seu projeto.</p>
+
+      <a href="mailto:rayssaalegria@gmail.com" class="email-link">
+        <span data-mui-icon="Email" aria-hidden="true"></span>
+        rayssaalegria@gmail.com
+      </a>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/rayssa-carla/" target="_blank" rel="noopener noreferrer" class="soc" aria-label="LinkedIn de Rayssa Alegria">
+          <span data-mui-icon="LinkedIn" aria-hidden="true"></span>
+          LinkedIn
+        </a>
+        <a href="https://github.com/rayssaalegria" target="_blank" rel="noopener noreferrer" class="soc" aria-label="GitHub de Rayssa Alegria">
+          <span data-mui-icon="GitHub" aria-hidden="true"></span>
+          GitHub
+        </a>
+        <a href="https://www.behance.net/rayssaalegria" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Behance de Rayssa Alegria">
+          <span data-mui-icon="Palette" aria-hidden="true"></span>
+          Behance
+        </a>
+        <a href="https://www.figma.com/@rayssacarla" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Figma de Rayssa Alegria">
+          <span data-mui-icon="GridView" aria-hidden="true"></span>
+          Figma
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div>© <span class="copyright-year"></span> <strong>Rayssa Alegria</strong>. <span data-i18n="footer.made">Feito com cuidado.</span></div>
+  <div>Manaus, AM · Brasil</div>
+</footer>
+
+<script src="js/mui-icons.bundle.js"></script>
+<script src="js/icons-init.js"></script>
+<script>
+  let currentLang = 'pt';
+
+  /* ── TEMA (Alegria light/dark) ── */
+  function updateThemeUI() {
+    const theme = document.documentElement.getAttribute('data-theme');
+    const label = document.getElementById('theme-label');
+    const iconEl = document.querySelector('.theme-icon');
+    if (theme === 'dark') {
+      if (label) label.textContent = currentLang === 'pt' ? 'Escuro' : 'Dark';
+      if (iconEl) iconEl.setAttribute('data-mui-icon', 'DarkMode');
+    } else {
+      if (label) label.textContent = currentLang === 'pt' ? 'Claro' : 'Light';
+      if (iconEl) iconEl.setAttribute('data-mui-icon', 'LightMode');
+    }
+    if (iconEl && window.refreshMuiIcons) window.refreshMuiIcons();
+  }
+
+  function toggleTheme() {
+    const root = document.documentElement;
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('rayssa-theme', next);
+    updateThemeUI();
+  }
+
+  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+  /* ── TRANSLATIONS ── */
+  const t = {
+    pt: {
+      'nav.about':'Sobre','nav.skills':'Skills','nav.projects':'Projetos',
+      'nav.experience':'Experiência','nav.contact':'Contato',
+      'hero.sakura':'桜 · design com alma',
+      'hero.badge':'Disponível para projetos',
+      'hero.sub':'Transformo ideias complexas em interfaces simples, bonitas e acessíveis. Design com propósito. Código com cuidado.',
+      'hero.cta1':'Ver projetos →','hero.cta2':'Entre em contato',
+      'projects.view':'Ver projeto →',
+      'projects.viewLive':'Abrir site →',
+      'tag.tool':'Ferramenta',
+      'systra.desc':'Extrator de design system a partir de qualquer URL — cores, tipografia, espaçamentos e mais.',
+      'systra.f1':'Análise automática de tokens visuais (cores, fontes, radius, sombras)',
+      'systra.f2':'Exportação organizada para uso em Figma e código',
+      'systra.f3':'Interface focada em fluxo rápido: colar URL e inspecionar',
+      'systra.f4':'Disponível em miraynaike.com/systra — produto real, não só conceito',
+      'about.label':'Sobre mim',
+      'about.h2':'Design que conecta<br>pessoas a soluções',
+      'about.p1':'Sou <strong>Rayssa Alegria</strong>, UI/UX Designer e Desenvolvedora Front-End baseada em Manaus, AM. Graduada em Sistemas de Informação e pós-graduada em Desenvolvimento Front-End, combino sensibilidade visual com habilidade técnica para criar experiências digitais que realmente funcionam.',
+      'about.p2':'Acredito que bom design vai além da estética — é acessibilidade, clareza e impacto real na vida das pessoas.',
+      'about.stat1':'Anos de experiência','about.stat2':'Projetos entregues',
+      'about.stat3':'Domínio em Figma','about.stat4':'Titulações acadêmicas',
+      'about.card':'Especialista em criar interfaces que equilibram beleza e funcionalidade, com forte atuação em Figma, React.js e desenvolvimento no-code com Bubble.',
+      'about.loc':'Manaus, Amazonas, Brasil',
+      'skills.label':'Habilidades','skills.h2':'O que eu sei fazer',
+      'skills.desc':'Design e desenvolvimento como partes de um mesmo processo criativo.',
+      'skills.s1':'Pesquisa, wireframes, prototipagem e design de interfaces acessíveis e centradas no usuário.',
+      'skills.s2':'Design de alta fidelidade, sistemas de design, componentes e prototipagem interativa.',
+      'skills.s3':'HTML, CSS, JavaScript e React.js para transformar designs em código funcional e elegante.',
+      'skills.s4':'Desenvolvimento ágil com Bubble para produtos de alta qualidade sem código complexo.',
+      'skills.s5h':'Branding &amp; Ilustração',
+      'skills.s5':'Identidade visual, iconografia e criação gráfica com Adobe Illustrator e XD.',
+      'skills.s6h':'Acessibilidade',
+      'skills.s6':'Design inclusivo com foco em WCAG, contraste, tipografia legível e experiência universal.',
+      'projects.label':'Projetos','projects.h2':'Trabalhos em destaque',
+      'projects.desc':'+20 projetos reais de UI/UX para setores públicos e privados.',
+      'tag.health':'Saúde','tag.security':'Segurança','tag.social':'Social',
+      'tag.mgmt':'Gestão','tag.logistics':'Logística','tag.emergency':'Emergência',
+      'tag.citizen':'Cidadão','tag.telecom':'Telecomunicação',
+      'p1.desc':'Sistema de gestão para Unidade de Pronto Atendimento.',
+      'p1.f1':'Triagem digital de pacientes com classificação por urgência',
+      'p1.f2':'Painel de controle de filas em tempo real',
+      'p1.f3':'Histórico de atendimentos e prontuário digital',
+      'p1.f4':'Dashboard operacional para gestores',
+      'p2.desc':'Interface para a Polícia Técnica.',
+      'p2.f1':'Sistema de mensagens internas entre equipes',
+      'p2.f2':'Mapa de rotas e acompanhamento de deslocamentos',
+      'p2.f3':'Visão geral operacional com indicadores',
+      'p2.f4':'Painel de integrações com sistemas externos',
+      'p4.desc':'App da Subsecretaria de Proteção, Defesa e Bem-Estar Animal.',
+      'p4.f1':'Cadastro e histórico de pets por tutor',
+      'p4.f2':'Solicitação de doação de ração pelo app',
+      'p4.f3':'Mapa de pontos de distribuição e retirada',
+      'p4.f4':'Painel de gestão de beneficiários para servidores',
+      'p5.desc':'Plataforma de gestão de perícias médicas para o setor de saúde.',
+      'p5.f1':'Agendamento online de perícias e exames',
+      'p5.f2':'Emissão de laudos e relatórios médicos digitais',
+      'p5.f3':'Histórico completo de perícias por servidor/paciente',
+      'p5.f4':'Painel de controle para médicos peritos',
+      'p6.desc':'Sistema de controle patrimonial.',
+      'p6.f1':'Cadastro e rastreio de bens patrimoniais',
+      'p6.f2':'Confirmação de inventário com QR Code / NFC',
+      'p6.f3':'Relatórios de depreciação e movimentação',
+      'p6.f4':'Alertas de itens sem localização confirmada',
+      'p7.desc':'Interface de gestão de estoque e suprimentos.',
+      'p7.f1':'Registro de entradas e saídas de produtos',
+      'p7.f2':'Alertas automáticos de estoque mínimo',
+      'p7.f3':'Relatórios de consumo por período e setor',
+      'p7.f4':'Dashboard com métricas de movimentação',
+      'p8.desc':'Sistema de monitoramento e ação operacional para a Defesa Civil.',
+      'p8.f1':'Registro e acompanhamento de ocorrências em tempo real',
+      'p8.f2':'Mobilização e despacho de equipes de campo',
+      'p8.f3':'Mapa de risco com zonas de atenção',
+      'p8.f4':'Comunicação interna entre agentes e central',
+      'p9.desc':'Plataforma digital de defesa do consumidor.',
+      'p9.f1':'Abertura e acompanhamento de reclamações online',
+      'p9.f2':'Cadastro e gestão de empresas registradas',
+      'p9.f3':'Painel de mediação entre consumidor e empresa',
+      'p9.f4':'Indicadores de resolução e tempo de resposta',
+      'p10.desc':'Sistema para controle do banco de sangue hospitalar.',
+      'p10.f1':'Controle de estoque por tipo sanguíneo e validade',
+      'p10.f2':'Registro de doações e triagem de doadores',
+      'p10.f3':'Solicitações de transfusão por unidade hospitalar',
+      'p10.f4':'Alertas de estoque crítico e vencimento',
+      'p11.desc':'Sistema de gestão de ordens de serviço e comunicação em campo.',
+      'p11.f1':'Acompanhamento de ordens de serviço (O.S) em tempo real',
+      'p11.f2':'Mensagens entre equipes de campo e administração',
+      'p11.f3':'Controle de status e prioridade de atendimentos',
+      'p11.f4':'Histórico de intervenções técnicas por equipamento',
+      'exp.label':'Experiência','exp.h2':'Trajetória profissional',
+      'exp.desc':'Construindo produtos digitais com intenção desde 2021.',
+      'exp.date1':'2022 — Presente','exp.title1':'UI/UX Designer',
+      'exp.co1':'Prestador de Serviço &amp; SASI · Manaus, AM',
+      'exp.d1':'Design de produtos digitais completos para setores públicos e privados, com atuação em saúde, segurança pública, gestão governamental e cidadania. Pesquisa, prototipagem em Figma, design systems e entrega de specs para desenvolvimento.',
+      'exp.title2':'Web Designer','exp.co2':'Voluntário',
+      'exp.d2':'Criação de peças visuais e interfaces web para projetos sociais e comunitários, desenvolvendo habilidades de comunicação visual.',
+      'stack.label':'Stack','stack.h2':'Tecnologias',
+      'stack.desc':'Ferramentas que domino no dia a dia.',
+      'stk.proto':'Prototipagem','stk.a11y':'Acessibilidade',
+      'edu.label':'Formação','edu.h2':'Educação',
+      'edu.desc':'Base acadêmica sólida em design e tecnologia.',
+      'edu.deg1':'Pós-graduação em Desenvolvimento Front-End',
+      'edu.deg2':'Bacharelado em Sistemas de Informação',
+      'edu.year1':'Concluído em 2023',
+      'contact.label':'Contato','contact.h2':'Vamos criar algo juntos?',
+      'contact.h3':'Estou disponível para projetos',
+      'contact.p':'Produto novo, redesign ou consultoria — adoraria ouvir sobre o seu projeto.',
+      'footer.made':'Feito com cuidado.',
+    },
+    en: {
+      'nav.about':'About','nav.skills':'Skills','nav.projects':'Projects',
+      'nav.experience':'Experience','nav.contact':'Contact',
+      'hero.sakura':'桜 · design with soul',
+      'hero.badge':'Available for projects',
+      'hero.sub':'I turn complex ideas into simple, beautiful, and accessible interfaces. Design with purpose. Code with care.',
+      'hero.cta1':'View projects →','hero.cta2':'Get in touch',
+      'projects.view':'View project →',
+      'projects.viewLive':'Open site →',
+      'tag.tool':'Tool',
+      'systra.desc':'Design system extractor from any URL — colors, typography, spacing, and more.',
+      'systra.f1':'Automatic analysis of visual tokens (colors, fonts, radius, shadows)',
+      'systra.f2':'Organized export for use in Figma and code',
+      'systra.f3':'Fast workflow UI: paste a URL and inspect results',
+      'systra.f4':'Live at miraynaike.com/systra — a real shipped product',
+      'about.label':'About me',
+      'about.h2':'Design that connects<br>people to solutions',
+      'about.p1':'I\'m <strong>Rayssa Alegria</strong>, a UI/UX Designer and Front-End Developer based in Manaus, AM, Brazil. With a degree in Information Systems and a postgrad in Front-End Development, I blend visual sensitivity with technical skills to build digital experiences that truly work.',
+      'about.p2':'I believe good design goes beyond aesthetics — it\'s about accessibility, clarity, and real impact in people\'s lives.',
+      'about.stat1':'Years of experience','about.stat2':'Projects delivered',
+      'about.stat3':'Figma mastery','about.stat4':'Academic degrees',
+      'about.card':'Specialist in crafting interfaces that balance beauty and functionality, with a strong focus on Figma, React.js, and no-code development with Bubble.',
+      'about.loc':'Manaus, Amazonas, Brazil',
+      'skills.label':'Skills','skills.h2':'What I do',
+      'skills.desc':'Design and development as parts of the same creative process.',
+      'skills.s1':'Research, wireframes, prototyping, and accessible, user-centered interface design.',
+      'skills.s2':'High-fidelity design, design systems, components, and interactive prototyping.',
+      'skills.s3':'HTML, CSS, JavaScript, and React.js to turn designs into functional, elegant code.',
+      'skills.s4':'Agile development with Bubble for high-quality products without complex code.',
+      'skills.s5h':'Branding &amp; Illustration',
+      'skills.s5':'Visual identity, iconography, and graphic creation with Adobe Illustrator and XD.',
+      'skills.s6h':'Accessibility',
+      'skills.s6':'Inclusive design focused on WCAG, contrast, readable typography, and universal experience.',
+      'projects.label':'Projects','projects.h2':'Featured works',
+      'projects.desc':'+20 real UI/UX projects for public and private sectors.',
+      'tag.health':'Health','tag.security':'Security','tag.social':'Social',
+      'tag.mgmt':'Management','tag.logistics':'Logistics','tag.emergency':'Emergency',
+      'tag.citizen':'Citizen','tag.telecom':'Telecommunications',
+      'p1.desc':'Management system for an Emergency Care Unit (UPA).',
+      'p1.f1':'Digital patient triage with urgency classification',
+      'p1.f2':'Real-time queue control dashboard',
+      'p1.f3':'Appointment history and digital medical records',
+      'p1.f4':'Operational dashboard for managers',
+      'p2.desc':'Interface for the Technical Police.',
+      'p2.f1':'Internal messaging system between teams',
+      'p2.f2':'Route map and displacement tracking',
+      'p2.f3':'Operational overview with key indicators',
+      'p2.f4':'Integration panel with external systems',
+      'p4.desc':'App by the Sub-secretariat for Animal Protection and Welfare.',
+      'p4.f1':'Pet registration and history by owner',
+      'p4.f2':'In-app pet food donation requests',
+      'p4.f3':'Map of distribution and pickup points',
+      'p4.f4':'Beneficiary management panel for public servants',
+      'p5.desc':'Medical examination management platform for the health sector.',
+      'p5.f1':'Online scheduling of medical examinations',
+      'p5.f2':'Digital medical report and certificate generation',
+      'p5.f3':'Full examination history per patient/employee',
+      'p5.f4':'Control panel for medical examiners',
+      'p6.desc':'Asset control system.',
+      'p6.f1':'Asset registration and tracking',
+      'p6.f2':'Inventory confirmation via QR Code / NFC',
+      'p6.f3':'Depreciation and movement reports',
+      'p6.f4':'Alerts for unconfirmed item locations',
+      'p7.desc':'Inventory and supply management interface.',
+      'p7.f1':'Product entry and exit logging',
+      'p7.f2':'Automatic minimum stock alerts',
+      'p7.f3':'Consumption reports by period and department',
+      'p7.f4':'Dashboard with movement metrics',
+      'p8.desc':'Monitoring and operational action system for Civil Defense.',
+      'p8.f1':'Real-time incident registration and tracking',
+      'p8.f2':'Field team mobilization and dispatching',
+      'p8.f3':'Risk map with attention zones',
+      'p8.f4':'Internal communication between agents and command center',
+      'p9.desc':'Digital consumer protection platform.',
+      'p9.f1':'Online complaint filing and tracking',
+      'p9.f2':'Registered company management',
+      'p9.f3':'Mediation panel between consumer and company',
+      'p9.f4':'Resolution indicators and response time metrics',
+      'p10.desc':'Hospital blood bank control system.',
+      'p10.f1':'Stock control by blood type and expiration',
+      'p10.f2':'Donation registration and donor screening',
+      'p10.f3':'Transfusion requests by hospital unit',
+      'p10.f4':'Critical stock and expiration alerts',
+      'p11.desc':'Service order management and field communication system.',
+      'p11.f1':'Real-time service order (S.O.) tracking',
+      'p11.f2':'Messaging between field teams and management',
+      'p11.f3':'Status and priority control for service calls',
+      'p11.f4':'Technical intervention history per equipment',
+      'exp.label':'Experience','exp.h2':'Professional journey',
+      'exp.desc':'Building digital products with intention since 2021.',
+      'exp.date1':'2022 — Present','exp.title1':'UI/UX Designer',
+      'exp.co1':'Service Provider &amp; SASI · Manaus, AM',
+      'exp.d1':'End-to-end digital product design for public and private sectors, covering health, public safety, government management, and citizenship. Research, Figma prototyping, design systems, and development-ready specs.',
+      'exp.title2':'Web Designer','exp.co2':'Volunteer',
+      'exp.d2':'Creation of visual assets and web interfaces for social and community projects, building visual communication skills.',
+      'stack.label':'Stack','stack.h2':'Technologies',
+      'stack.desc':'Tools I master every day.',
+      'stk.proto':'Prototyping','stk.a11y':'Accessibility',
+      'edu.label':'Education','edu.h2':'Education',
+      'edu.desc':'Solid academic foundation in design and technology.',
+      'edu.deg1':'Postgraduate in Front-End Development',
+      'edu.deg2':'Bachelor\'s in Information Systems',
+      'edu.year1':'Completed in 2023',
+      'contact.label':'Contact','contact.h2':'Let\'s create something together?',
+      'contact.h3':'I\'m available for projects',
+      'contact.p':'New product, redesign, or consulting — I\'d love to hear about your project.',
+      'footer.made':'Made with care.',
+    }
+  };
+
+  function setLang(lang) {
+    currentLang = lang;
+    const dict = t[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-pt').setAttribute('aria-pressed', lang === 'pt');
+    document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
+    updateThemeUI();
+  }
+
+  document.addEventListener('mui-icons-ready', updateThemeUI);
+  updateThemeUI();
+
+  document.querySelectorAll('.copyright-year').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
+
+  /* ── MOBILE MENU ── */
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn  = document.getElementById('hamburger');
+    const open = menu.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  function closeMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn  = document.getElementById('hamburger');
+    menu.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Abrir menu');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMobileMenu();
+  });
+
+  /* ── SCROLL PROGRESS ── */
+  const progressBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    const h  = document.documentElement;
+    const st = h.scrollTop || document.body.scrollTop;
+    const sh = h.scrollHeight - h.clientHeight;
+    const pct = sh > 0 ? (st / sh * 100) : 0;
+    progressBar.style.width = pct + '%';
+    progressBar.setAttribute('aria-valuenow', Math.round(pct));
+  }, { passive: true });
+
+  /* ── FADE IN ── */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fi').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

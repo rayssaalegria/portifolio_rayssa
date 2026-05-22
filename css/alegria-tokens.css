@@ -1,0 +1,241 @@
+/* ============================================================
+   Alegria — Design Tokens
+   Drop-in CSS variables: colors, type, spacing, radius, shadow.
+   Default theme is light. Add data-theme="dark" to toggle.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+:root {
+  /* -------- TYPE FAMILIES ---------------------------------- */
+  --font-sans: "Inter", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Inter", "Lato", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Menlo", ui-monospace, monospace;
+
+  /* -------- TYPE SCALE (1.200 minor third) ----------------- */
+  --text-display: 48px;     --lh-display: 56px;     /* 116% */
+  --text-h1: 40px;          --lh-h1: 48px;          /* 120% */
+  --text-h2: 32px;          --lh-h2: 40px;          /* 125% */
+  --text-h3: 24px;          --lh-h3: 32px;          /* 130% */
+  --text-h4: 20px;          --lh-h4: 28px;          /* 140% */
+  --text-default: 18px;     --lh-default: 28px;     /* ~155% */
+  --text-small: 16px;       --lh-small: 24px;       /* 150% */
+  --text-tiny: 14px;        --lh-tiny: 20px;        /* 140% */
+  --text-uppercase: 14px;   --lh-uppercase: 24px;   /* tracked +2px */
+  --tracking-display: -0.5px;
+  --tracking-uppercase: 2px;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  /* -------- SPACING (4px grid) ----------------------------- */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+  --space-48: 192px;
+  --space-64: 256px;
+
+  /* -------- RADIUS ----------------------------------------- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-pill: 9999px;
+
+  /* -------- PRIMITIVES — LIGHT MODE ------------------------ */
+  /* Indigo brand scale */
+  --c-brand-50:  rgba(76,100,217,0.06);
+  --c-brand-200: rgb(163,178,255);
+  --c-brand-500: rgb(89,117,255);
+  --c-brand-700: rgb(61,85,204);
+  --c-brand-800: rgb(76,100,217);   /* primary */
+  --c-brand-900: rgb(0,17,102);
+  --c-brand-1000: rgb(0,9,51);
+
+  /* Navy / neutral on light */
+  --c-ink-1000: rgba(0,6,38,0.9);
+  --c-ink-700:  rgba(0,9,51,0.65);
+  --c-ink-500:  rgba(0,13,77,0.45);
+  --c-ink-100:  rgba(0,17,102,0.10);
+  --c-ink-50:   rgba(0,21,128,0.04);
+  --c-ink-25:   rgba(0,21,128,0.02);
+
+  /* Surfaces light */
+  --c-surface-0: rgb(255,255,255);
+  --c-surface-1: rgb(245,246,250);
+
+  /* Status colors */
+  --c-error-800:   rgb(199,58,58);
+  --c-error-200:   rgb(255,156,156);
+  --c-error-50:    rgb(255,238,238);
+  --c-warning-800: rgb(143,108,26);
+  --c-warning-200: rgb(224,190,112);
+  --c-warning-50:  rgb(255,247,224);
+  --c-success-800: rgb(6,122,87);
+  --c-success-200: rgb(119,199,175);
+  --c-success-50:  rgb(228,246,239);
+  --c-info-800:    rgb(26,116,168);
+  --c-info-200:    rgb(126,192,229);
+  --c-info-50:     rgb(228,242,250);
+
+  /* -------- SEMANTIC TOKENS — LIGHT ------------------------ */
+  /* TEXT */
+  --text-neutral-strong:  var(--c-ink-1000);
+  --text-neutral-weak:    var(--c-ink-700);
+  --text-neutral-weaker:  var(--c-ink-500);
+  --text-brand-strong:    var(--c-brand-800);
+  --text-error-strong:    var(--c-error-800);
+  --text-warning-strong:  var(--c-warning-800);
+  --text-success-strong:  var(--c-success-800);
+  --text-info-strong:     var(--c-info-800);
+  --text-inverse-strong:  rgb(255,255,255);
+  --text-inverse-weak:    rgba(255,255,255,0.72);
+  --text-disabled:        rgba(0,13,77,0.35);
+
+  /* STROKE / BORDER */
+  --stroke-neutral-strong: rgba(0,17,102,0.18);
+  --stroke-neutral-weak:   var(--c-ink-100);
+  --stroke-brand-strong:   var(--c-brand-800);
+  --stroke-error-strong:   var(--c-error-800);
+  --stroke-warning-strong: var(--c-warning-800);
+  --stroke-success-strong: var(--c-success-800);
+  --stroke-info-strong:    var(--c-info-800);
+  --stroke-focus:          var(--c-brand-500);
+
+  /* FILL (used for solid components: button bg, badge bg) */
+  --fill-brand:           var(--c-brand-800);
+  --fill-brand-hover:     var(--c-brand-700);
+  --fill-brand-press:     var(--c-brand-1000);
+  --fill-brand-weak:      var(--c-brand-50);
+  --fill-neutral:         var(--c-ink-1000);
+  --fill-neutral-weak:    var(--c-ink-50);
+  --fill-error:           var(--c-error-800);
+  --fill-warning:         var(--c-warning-800);
+  --fill-success:         var(--c-success-800);
+  --fill-info:            var(--c-info-800);
+  --fill-disabled:        var(--c-ink-50);
+
+  /* ICON */
+  --icon-neutral-strong:  var(--c-ink-1000);
+  --icon-neutral-weak:    var(--c-ink-700);
+  --icon-brand-strong:    var(--c-brand-800);
+  --icon-inverse-strong:  rgb(255,255,255);
+
+  /* BACKGROUND / SURFACE */
+  --background-base:       var(--c-surface-0);     /* page */
+  --background-sunken:     var(--c-surface-1);     /* deeper */
+  --background-raised:     var(--c-surface-0);     /* cards over sunken */
+  --background-overlay:    var(--c-surface-0);     /* modals, popovers */
+  --background-neutral-weak: var(--c-ink-25);
+  --background-brand-weak:   rgba(76,100,217,0.06);
+  --background-error-weak:   var(--c-error-50);
+  --background-warning-weak: var(--c-warning-50);
+  --background-success-weak: var(--c-success-50);
+  --background-info-weak:    var(--c-info-50);
+  --background-inverse:      rgb(18,19,26);
+
+  /* -------- SHADOWS / ELEVATION ---------------------------- */
+  --shadow-raised: 0 1px 2px rgba(21,24,40,0.06), 0 1px 3px rgba(21,24,40,0.10);
+  --shadow-overlay: 0 8px 8px -4px rgba(0,0,0,0.04), 0 20px 24px -4px rgba(0,0,0,0.08);
+  --shadow-focus: 0 0 0 3px rgba(76,100,217,0.30);
+  --shadow-cursor: 0 2px 6px rgba(0,0,0,0.40);
+
+  /* -------- LAYOUT ----------------------------------------- */
+  --container-max: 1200px;
+  --gutter-desktop: 96px;
+  --gutter-tablet: 32px;
+  --gutter-mobile: 16px;
+}
+
+/* -------- DARK MODE OVERRIDES ------------------------------ */
+[data-theme="dark"] {
+  /* Surfaces — progressively LIGHTER for higher elevation */
+  --background-base:    rgb(18,19,26);
+  --background-sunken:  rgb(12,13,18);
+  --background-raised:  rgb(28,30,38);
+  --background-overlay: rgb(36,38,48);
+  --background-inverse: rgb(255,255,255);
+
+  /* Inverse fills */
+  --background-neutral-weak: rgba(255,255,255,0.04);
+  --background-brand-weak:   rgba(89,117,255,0.12);
+  --background-error-weak:   rgba(255,74,74,0.12);
+  --background-warning-weak: rgba(255,192,46,0.12);
+  --background-success-weak: rgba(10,204,146,0.12);
+  --background-info-weak:    rgba(38,176,255,0.12);
+
+  /* Text on dark */
+  --text-neutral-strong: rgb(255,255,255);
+  --text-neutral-weak:   rgba(255,255,255,0.72);
+  --text-neutral-weaker: rgba(255,255,255,0.50);
+  --text-inverse-strong: var(--c-ink-1000);
+  --text-inverse-weak:   var(--c-ink-700);
+  --text-disabled:       rgba(255,255,255,0.32);
+  --text-brand-strong:   rgb(163,178,255);
+  --text-error-strong:   rgb(255,156,156);
+  --text-warning-strong: rgb(255,192,46);
+  --text-success-strong: rgb(119,199,175);
+  --text-info-strong:    rgb(126,192,229);
+
+  /* Strokes on dark */
+  --stroke-neutral-strong: rgba(255,255,255,0.24);
+  --stroke-neutral-weak:   rgba(255,255,255,0.12);
+  --stroke-brand-strong:   rgb(163,178,255);
+  --stroke-focus:          rgb(163,178,255);
+
+  /* Fills on dark */
+  --fill-brand:        rgb(89,117,255);
+  --fill-brand-hover:  rgb(76,100,217);
+  --fill-brand-press:  rgb(61,85,204);
+  --fill-neutral:      rgb(255,255,255);
+  --fill-neutral-weak: rgba(255,255,255,0.06);
+  --fill-disabled:     rgba(255,255,255,0.06);
+
+  /* Icons on dark */
+  --icon-neutral-strong: rgb(255,255,255);
+  --icon-neutral-weak:   rgba(255,255,255,0.72);
+  --icon-brand-strong:   rgb(163,178,255);
+  --icon-inverse-strong: var(--c-ink-1000);
+
+  /* Shadows are subtle in dark mode; rely on bg lift */
+  --shadow-raised:  0 1px 2px rgba(0,0,0,0.32);
+  --shadow-overlay: 0 12px 32px rgba(0,0,0,0.48);
+  --shadow-focus:   0 0 0 3px rgba(163,178,255,0.40);
+}
+
+/* -------- BASE TYPE STYLES (utility classes) --------------- */
+.t-display  { font: var(--weight-bold) var(--text-display)/var(--lh-display) var(--font-display); letter-spacing: var(--tracking-display); }
+.t-h1       { font: var(--weight-bold) var(--text-h1)/var(--lh-h1) var(--font-display); letter-spacing: var(--tracking-display); }
+.t-h2       { font: var(--weight-bold) var(--text-h2)/var(--lh-h2) var(--font-display); }
+.t-h3       { font: var(--weight-bold) var(--text-h3)/var(--lh-h3) var(--font-sans); }
+.t-h4       { font: var(--weight-bold) var(--text-h4)/var(--lh-h4) var(--font-sans); }
+.t-default  { font: var(--weight-regular) var(--text-default)/var(--lh-default) var(--font-sans); }
+.t-small    { font: var(--weight-regular) var(--text-small)/var(--lh-small) var(--font-sans); }
+.t-tiny     { font: var(--weight-regular) var(--text-tiny)/var(--lh-tiny) var(--font-sans); }
+.t-uppercase{ font: var(--weight-bold) var(--text-uppercase)/var(--lh-uppercase) var(--font-sans); letter-spacing: var(--tracking-uppercase); text-transform: uppercase; }
+.t-mono     { font-family: var(--font-mono); }
+
+/* Smooth defaults */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: var(--font-sans);
+  color: var(--text-neutral-strong);
+  background: var(--background-base);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
