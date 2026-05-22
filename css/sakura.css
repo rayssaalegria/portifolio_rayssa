@@ -398,24 +398,10 @@ footer,
   z-index: 3;
 }
 
-@media (max-width: 900px) {
-  .hero-portrait {
-    width: min(55vw, 300px);
-    right: -4%;
-    top: 54%;
-    opacity: 0.9;
-  }
-  .hero-chibi {
-    max-height: 45vh;
-  }
+/* Hero mobile: layout controlado em portfolio.css (1024px) */
+@media (max-width: 1024px) {
   .hero-portrait__base {
-    width: 108%;
-  }
-  .hero-enso {
-    width: 80vw;
-    height: 80vw;
-    right: -15%;
-    opacity: 0.5;
+    width: 110%;
   }
 }
 
