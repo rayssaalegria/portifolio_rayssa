@@ -256,11 +256,25 @@ nav a:hover {
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: calc(var(--space-20) + 48px) var(--gutter) var(--space-20);
   position: relative;
   overflow-x: clip;
   overflow-y: visible;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(260px, 360px);
+  gap: clamp(var(--space-6), 4vw, var(--space-16));
+  align-items: center;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
 }
 
 .glow {
@@ -269,24 +283,27 @@ nav a:hover {
   pointer-events: none;
 }
 .glow-1 {
-  width: 700px;
-  height: 700px;
-  top: -200px;
-  right: -100px;
+  width: min(700px, 90vw);
+  height: min(700px, 90vw);
+  top: -15%;
+  left: 50%;
+  right: auto;
+  transform: translateX(-15%);
   background: radial-gradient(circle, rgba(155, 140, 255, 0.13) 0%, transparent 70%);
 }
 .glow-2 {
-  width: 450px;
-  height: 450px;
-  bottom: 0;
-  left: -80px;
+  width: min(450px, 70vw);
+  height: min(450px, 70vw);
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-55%);
   background: radial-gradient(circle, rgba(244, 114, 182, 0.09) 0%, transparent 70%);
 }
 
 .hero-content {
-  max-width: 52rem;
+  max-width: 34rem;
   position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
 .status-badge {
@@ -1077,13 +1094,17 @@ footer strong {
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   #hero {
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
     min-height: auto;
     overflow: visible;
     padding-top: calc(var(--space-20) + 56px);
     padding-bottom: var(--space-16);
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+    max-width: 36rem;
+    text-align: center;
   }
 
   .hero-content {
@@ -1091,34 +1112,30 @@ footer strong {
     width: 100%;
   }
 
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-row {
+    justify-content: center;
+  }
+
   .hero-portrait {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: min(300px, 86vw);
-    margin: var(--space-10) auto 0;
-    padding-bottom: 0;
+    max-width: min(300px, 82vw);
+    margin-top: var(--space-4);
     animation: none;
   }
 
   .hero-chibi {
     max-height: min(48vh, 340px);
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .hero-enso {
-    display: none;
-  }
-
-  .glow-1 {
-    width: min(90vw, 500px);
-    right: -30%;
-  }
-
-  .glow-2 {
-    width: min(70vw, 360px);
+    width: min(85vw, 420px);
+    height: min(85vw, 420px);
+    transform: translate(-50%, -48%);
+    opacity: 0.55;
   }
 
   .scroll-hint {
@@ -1218,8 +1235,7 @@ footer strong {
   }
 
   .hero-portrait {
-    width: min(260px, 92vw);
-    margin-top: var(--space-8);
+    max-width: min(260px, 92vw);
   }
 
   .hero-chibi {
