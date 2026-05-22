@@ -1,0 +1,8 @@
+{
+  "name": "portifolio-rayssa",
+  "private": true,
+  "description": "Build leve para deploy Git na Hostinger — sem dependências npm",
+  "scripts": {
+    "build": "node scripts/prepare-deploy.mjs"
+  }
+}

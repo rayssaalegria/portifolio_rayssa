@@ -18,6 +18,7 @@ Abra http://127.0.0.1:5173
 Só precisa se for alterar ícones (`js/mui-icons.bundle.js` já está no repositório):
 
 ```bash
+cp tools/package.json.example tools/package.json
 cd tools && npm install && npm run build:icons
 ```
 

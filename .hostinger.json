@@ -1,0 +1,7 @@
+{
+  "framework": "static",
+  "build": {
+    "command": "npm run build",
+    "output": "deploy"
+  }
+}

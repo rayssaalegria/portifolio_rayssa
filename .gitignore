@@ -1,6 +1,7 @@
 node_modules/
 tools/node_modules/
 deploy/
+package-lock.json
 .claude/
 .DS_Store
 package-lock.json
