@@ -1,14 +1,23 @@
 # Deploy na Hostinger — rayssaalegria.com.br
 
-Site estático: não precisa de Node.js no servidor. Só enviar arquivos para `public_html`.
+Site estático: **não** use app Node.js no hPanel. Use **GIT** (Avançado) ou upload manual.
 
-## 1. Gerar a pasta de upload
+## Deploy por Git (hPanel → GIT)
+
+1. Repositório: `rayssaalegria/portifolio_rayssa`
+2. Branch: `main`
+3. **Diretório raiz:** `/` (raiz do repositório) ou deixe `public_html` vazio conforme o painel — os arquivos `index.html`, `css/`, `js/`, `assets/` devem ir para a raiz do site
+4. **Não** configure comando de build (`npm run build`) — o `package.json` fica só em `tools/` para não disparar build na Hostinger
+5. Clique em **Reimplantar**
+
+Se aparecer **“Falha na construção”**: o painel tentou rodar Node/npm. Confirme que não há `package.json` na raiz do repo (após o último push) e que o site não está como “Node.js Web App”.
+
+## 1. Gerar a pasta de upload (manual)
 
 No computador, na pasta do projeto:
 
 ```bash
-npm install          # só se ainda não rodou (gera js/mui-icons.bundle.js)
-npm run deploy:prepare
+node scripts/prepare-deploy.mjs
 ```
 
 Isso cria a pasta **`deploy/`** com tudo que deve ir para a hospedagem.

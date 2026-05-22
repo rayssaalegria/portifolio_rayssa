@@ -15,15 +15,20 @@ Abra http://127.0.0.1:5173
 
 ## Ícones (Material UI)
 
+Só precisa se for alterar ícones (`js/mui-icons.bundle.js` já está no repositório):
+
 ```bash
-npm install
-npm run build:icons
+cd tools && npm install && npm run build:icons
 ```
 
 ## Deploy (Hostinger)
 
+**Git (recomendado):** conecte o repositório no hPanel — a raiz do site é o próprio repo (sem `npm install`).
+
+**Manual / FTP:**
+
 ```bash
-npm run deploy:prepare
+node scripts/prepare-deploy.mjs
 ```
 
 Envie o conteúdo da pasta `deploy/` para `public_html`. Detalhes em [DEPLOY-HOSTINGER.md](./DEPLOY-HOSTINGER.md).

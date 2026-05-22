@@ -1,11 +1,9 @@
 {
-  "name": "portifolio-rayssa",
+  "name": "portifolio-rayssa-tools",
   "private": true,
   "type": "module",
   "scripts": {
-    "build:icons": "node scripts/build-icons.mjs",
-    "deploy:prepare": "node scripts/prepare-deploy.mjs",
-    "postinstall": "npm run build:icons"
+    "build:icons": "node ../scripts/build-icons.mjs"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
