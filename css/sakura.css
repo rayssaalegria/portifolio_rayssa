@@ -208,10 +208,12 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  padding: var(--space-6) var(--gutter) 0;
-  max-width: calc(var(--container-max) + var(--gutter) * 2);
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  padding: var(--space-10) max(var(--gutter), calc((100% - var(--container-max)) / 2));
+  margin: 0;
   opacity: 0.5;
+  box-sizing: border-box;
 }
 .section-sakura-divider span {
   display: block;

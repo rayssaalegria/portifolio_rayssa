@@ -106,6 +106,8 @@
   </div>
 </section>
 
+<div class="section-sakura-divider" aria-hidden="true"><span></span><span></span><span></span></div>
+
 <!-- ── SOBRE ── -->
 <section id="sobre">
   <div class="sobre-grid">
@@ -932,7 +934,7 @@
   /* ── FADE IN ── */
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.fi').forEach(el => io.observe(el));
 </script>
 </body>
